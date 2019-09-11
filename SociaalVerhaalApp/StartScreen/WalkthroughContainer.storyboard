@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6UZ-8b-Z5a">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Start Screen View Controller-->
+        <scene sceneID="Lgi-5Z-oWh">
+            <objects>
+                <viewController storyboardIdentifier="MainStartScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6UZ-8b-Z5a" customClass="MainStartScreenViewController" customModule="SociaalVerhaalApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PIU-CO-1Q5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0G-Ps-MMc">
+                                <rect key="frame" x="35" y="298" width="306" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="open">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="presentWalkthrough" destination="6UZ-8b-Z5a" eventType="touchUpInside" id="6p6-x9-oy7"/>
+                                    <action selector="presentWalkthrugh:" destination="WRP-By-baE" eventType="touchUpInside" id="nzN-Ua-GkR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2471104231" green="0.66060552110000004" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="7Oc-7P-8as"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R11-gj-QPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="WRP-By-baE" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="368.80000000000001" y="-224.4377811094453"/>
+        </scene>
+        <!--Walkthrough View Controller-->
+        <scene sceneID="Uj0-6u-aWC">
+            <objects>
+                <viewController storyboardIdentifier="BWWalkthroughContainer" id="4MD-Cy-hGz" customClass="BWWalkthroughViewController" customModule="BWWalkthrough" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zpe-BY-4Vy"/>
+                        <viewControllerLayoutGuide type="bottom" id="SGt-Ji-8lK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5q9-wj-fxd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button hidden="YES" opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YF-Uc-afT">
+                                <rect key="frame" x="20" y="314.5" width="25" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="69P-uP-vlV"/>
+                                    <constraint firstAttribute="height" constant="38" id="rAu-AJ-OVq"/>
+                                </constraints>
+                                <state key="normal" image="Prev"/>
+                                <connections>
+                                    <action selector="prevPage" destination="4MD-Cy-hGz" eventType="touchUpInside" id="WR9-dq-jrM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWM-2p-cSc">
+                                <rect key="frame" x="330" y="314.5" width="25" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="50N-bA-EBZ"/>
+                                    <constraint firstAttribute="height" constant="38" id="pbN-k4-7RG"/>
+                                </constraints>
+                                <state key="normal" image="Next"/>
+                                <connections>
+                                    <action selector="nextPage" destination="4MD-Cy-hGz" eventType="touchUpInside" id="yGO-hc-wYs"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="redraw" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcl-q8-dWK">
+                                <rect key="frame" x="330" y="28" width="24" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="MiX-Tb-cJp"/>
+                                    <constraint firstAttribute="width" constant="24" id="Whr-nd-rHv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" image="Close"/>
+                                <connections>
+                                    <action selector="close:" destination="4MD-Cy-hGz" eventType="touchUpInside" id="Wy7-Yv-vyy"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ap7-x2-Ibm">
+                                <rect key="frame" x="168" y="625" width="39" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.1450980392" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ap7-x2-Ibm" firstAttribute="centerX" secondItem="5q9-wj-fxd" secondAttribute="centerX" id="8B8-kB-stH"/>
+                            <constraint firstItem="SGt-Ji-8lK" firstAttribute="top" secondItem="Ap7-x2-Ibm" secondAttribute="bottom" constant="5" id="PTe-UW-WFS"/>
+                            <constraint firstItem="1YF-Uc-afT" firstAttribute="leading" secondItem="5q9-wj-fxd" secondAttribute="leading" constant="20" id="Qga-ek-vdk"/>
+                            <constraint firstAttribute="trailing" secondItem="XWM-2p-cSc" secondAttribute="trailing" constant="20" id="Sne-yd-6LA"/>
+                            <constraint firstAttribute="trailing" secondItem="rcl-q8-dWK" secondAttribute="trailing" constant="21" id="ToK-uD-Awl"/>
+                            <constraint firstItem="XWM-2p-cSc" firstAttribute="centerY" secondItem="5q9-wj-fxd" secondAttribute="centerY" id="e7G-2R-Qwy"/>
+                            <constraint firstItem="rcl-q8-dWK" firstAttribute="top" secondItem="zpe-BY-4Vy" secondAttribute="bottom" constant="8" id="pOw-os-UdR"/>
+                            <constraint firstItem="1YF-Uc-afT" firstAttribute="centerY" secondItem="5q9-wj-fxd" secondAttribute="centerY" id="q69-Yh-ZZb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="H7B-mB-lnW"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="rcl-q8-dWK" id="x7x-Hy-JF6"/>
+                        <outlet property="nextButton" destination="XWM-2p-cSc" id="O8p-jr-qUk"/>
+                        <outlet property="pageControl" destination="Ap7-x2-Ibm" id="O9y-aO-9D3"/>
+                        <outlet property="prevButton" destination="1YF-Uc-afT" id="JH3-kq-WV9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iIJ-fW-Cq5" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2422" y="-909"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="PEn-v6-8Ph">
+            <objects>
+                <viewController storyboardIdentifier="Page1" id="9ff-Fq-e1k" customClass="BWWalkthroughPageViewController" customModule="BWWalkthrough" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VmF-xj-taO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hier een Walkthrough" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ver-v8-JHY">
+                                <rect key="frame" x="16" y="103" width="343" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Tbe-VQ-0VP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7rw-bw-mpg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1376.8" y="-224.4377811094453"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="MRf-BI-e7h">
+            <objects>
+                <viewController storyboardIdentifier="Page2" id="exs-kl-nTQ" customClass="BWWalkthroughPageViewController" customModule="BWWalkthrough" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Goo-KN-SfZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hier een Walkthrough" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7i4-56-Eq8">
+                                <rect key="frame" x="16" y="104" width="343" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35275281040000001" green="0.67407077209999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="3Th-8b-3UN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hLo-1E-Pfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2066" y="-224"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="KX1-ph-bmG">
+            <objects>
+                <viewController storyboardIdentifier="Page3" id="rHo-D7-0Jx" customClass="BWWalkthroughPageViewController" customModule="BWWalkthrough" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0te-Nt-vUh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hier een Walkthrough" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0id-Za-Npg">
+                                <rect key="frame" x="16" y="110" width="343" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16862745100000001" green="0.67450980390000004" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="okh-aZ-Ma4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9we-DT-6IF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2718" y="-224"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="Kh5-JJ-mbT">
+            <objects>
+                <viewController storyboardIdentifier="Page4" id="ao3-NB-KVc" customClass="BWWalkthroughPageViewController" customModule="BWWalkthrough" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6nN-iD-pcS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hier een Walkthrough" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7i-nP-VCX">
+                                <rect key="frame" x="16" y="117" width="343" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.31958858670000001" blue="0.40600328499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="hSf-X9-lA1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qs0-0f-ZkW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3396" y="-224"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Close" width="47" height="54"/>
+        <image name="Next" width="54" height="87"/>
+        <image name="Prev" width="54" height="87"/>
+    </resources>
+</document>
